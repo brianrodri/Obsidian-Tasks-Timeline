@@ -813,9 +813,8 @@ function getTimeline(tasks) {
                 fileIcon +
                 "</div><div class='label'>" +
                 file +
-                "<span class='header'> > " +
-                header +
-                "</span></div></div>";
+                (header ? "<span class='header'> &gt; " + header + "</span>" : "") +
+                "</div></div>";
 
             item.tags.forEach(function (tag) {
                 var tagText = tag.replace("#", "");
